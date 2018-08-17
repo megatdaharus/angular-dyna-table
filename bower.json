@@ -1,0 +1,17 @@
+{
+  "name": "angular-dyna-table",
+  "main": "angular-dyna-table.js",
+  "homepage": "https://github.com/megatdaharus/angular-dyna-table",
+  "authors": [
+    "Megat <megatdaharus@gmail.com>"
+  ],
+  "description": "Dynamic Angularjs Table",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
