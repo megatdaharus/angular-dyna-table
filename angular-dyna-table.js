@@ -9,7 +9,11 @@ angular.module('dynaTable', [])
         <thead ng-class="scope.thead.class" style="{{scope.thead.style}}">\
           <tr ng-repeat="(r, tr) in scope.thead.tr" ng-class="tr.class" style="{{tr.style}}">\
             <th class="text-center" width="50" ng-if="option.numbering">{{scope.numbering}}</th>\
-            <th ng-repeat="(c, th) in tr.th" ng-click="onClick({element: {type: \'thead\', row: r, col: c}, data})" colspan="{{th.colspan}}" rowspan="{{th.rowspan}}" ng-class="th.class" style="{{th.style}}" ng-bind-html="th.text | html"></th>\
+            <th ng-repeat="(c, th) in tr.th" ng-click="onClick({element: {type: \'thead\', row: r, col: c}, data})" colspan="{{th.colspan}}" rowspan="{{th.rowspan}}" ng-class="th.class" style="{{th.style}}">\
+              <span ng-bind-html="th.text | html"></span>\
+              <i class="fa fa-sort-alpha-desc" ng-if="scope.info.order == $index && scope.info.by == \'DESC\'"></i>\
+              <i class="fa fa-sort-alpha-asc" ng-if="scope.info.order == $index && scope.info.by == \'ASC\'"></i>\
+            </th>\
           </tr>\
         </thead>\
         <tbody ng-class="scope.tbody.class" style="{{scope.tbody.style}}">\
